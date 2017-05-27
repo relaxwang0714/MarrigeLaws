@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">view</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_main_Name">主页</string>
+    <string name="menu_main_Lawyer">律师</string>
+    <string name="menu_main_Msg">消息</string>
+    <string name="menu_main_check">智能查询</string>
+    <string name="menu_main_check_txt">法条案例一应俱全</string>
+    <string name="menu_main_law">法条查询</string>
+    <string name="menu_main_lawyer">律师服务</string>
+    <string name="menu_main_news">新闻资讯</string>
+    <string name="menu_main_lawyer_publish_serve">律师服务</string>
+    <string name="menu_main_lawyer_publish_txt">尽量详细的描述了你的问题，律师才能更好的服务你哦</string>
+    <string name="menu_main_lawyer_publish_submit">提交</string>
+    <string name="menu_main_lawyer_publish_wait">您的问题已提交，请耐心等待……</string>
+    <string name="menu_main_lawyer_publish_wait_check">查看我的律师反馈</string>
+</resources>
