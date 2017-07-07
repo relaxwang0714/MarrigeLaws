@@ -21,7 +21,7 @@ public class NewsLab {
     }
     private NewsLab(Context context){
         mNewses = new ArrayList<>();
-        for (int i = 0;i<50;i++){
+        for (int i = 0;i<5;i++){
             News news = new News(getPicture(), getTitle(), getMainContext());
             mNewses.add(news);
         }

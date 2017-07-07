@@ -8,12 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by 13zqn on 2017/5/16.
+ * Created by 13zqn on 2017/7/6.
  */
 
-public class Menu_laywer_frg extends Fragment {
+public class HistoryQuestion extends Fragment{
+    @Nullable
+    @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.menu_check,container,false);
-        return v;
+        View view = inflater.inflate(R.layout.history_question,container,false);
+        return view;
     }
 }

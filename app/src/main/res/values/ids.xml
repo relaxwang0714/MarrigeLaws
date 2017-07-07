@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="menu_my_collection" type="id">menu_my_collection</item>
+    <item name="menu_my_history" type="id">menu_my_history</item>
+</resources>
