@@ -8,12 +8,13 @@ import java.util.UUID;
  * Created by 13zqn on 2017/5/24.
  */
 
-class LawyerItem {
+class Item {
     private UUID mId;
     private SimpleDateFormat mDate;
     private int mPicture;
     private String mContexts;
-    public LawyerItem() {
+    private String mTitle;
+    public Item() {
         mId = UUID.randomUUID();
         getDate();
     }
@@ -22,9 +23,6 @@ class LawyerItem {
     }
 
     public String getDate() {
-//        mDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        Date date = new Date();
-//        return mDate.format(date);
         Calendar c = Calendar.getInstance();
 
         String year = String.valueOf(c.get(Calendar.YEAR));
@@ -34,18 +32,21 @@ class LawyerItem {
         String mins = String.valueOf(c.get(Calendar.MINUTE));
 
         StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.append(year + "-" + month + "-" + day + "-" +hour + "-" + mins);
+        stringBuffer.append(year + "." + month + "." + day + " " +hour + ":" + mins);
+        return stringBuffer.toString();
+    }
+    public String getDateO() {
+        Calendar c = Calendar.getInstance();
+
+        String year = String.valueOf(c.get(Calendar.YEAR));
+        String month = String.valueOf(c.get(Calendar.MONTH));
+        String day = String.valueOf(c.get(Calendar.DAY_OF_MONTH));
+
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append( year + "." + month + "." + day );
         return stringBuffer.toString();
     }
 
-//    public void setDate(SimpleDateFormat date) {
-//        mDate = date;
-//    }
-
-//    @Override
-//    public String toString() {
-//        return getDate().toString();
-//    }
 
     public int getPicture() {
         return mPicture;
@@ -61,5 +62,13 @@ class LawyerItem {
 
     public void setContexts(String contexts) {
         mContexts = contexts;
+    }
+
+    public String getTitle() {
+        return mTitle;
+    }
+
+    public void setTitle(String title) {
+        mTitle = title;
     }
 }

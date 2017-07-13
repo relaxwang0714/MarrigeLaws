@@ -155,7 +155,6 @@ public class Menu_main_frg extends Fragment {
 
         @Override
         public void destroyItem(ViewGroup view, int position, Object object) {
-            // TODO Auto-generated method stub
 //			super.destroyItem(container, position, object);
 //			view.removeView(view.getChildAt(position));
 //			view.removeViewAt(position);
@@ -164,7 +163,6 @@ public class Menu_main_frg extends Fragment {
 
         @Override
         public Object instantiateItem(ViewGroup view, int position) {
-            // TODO Auto-generated method stub
             position = position % images.size();
             view.addView(images.get(position));
             return images.get(position);
@@ -189,7 +187,6 @@ public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
     //线程
     @Override
     public void onStart() {
-        // TODO Auto-generated method stub
         super.onStart();
         scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
         scheduledExecutorService.scheduleWithFixedDelay(
@@ -218,7 +215,6 @@ public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
     };
 //    @Override
 //    public void onStop() {
-//        // TODO Auto-generated method stub
 //        super.onStop();
 //    }
 

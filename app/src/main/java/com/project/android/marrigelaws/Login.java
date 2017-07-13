@@ -75,7 +75,7 @@ public class Login extends AppCompatActivity{
             }
         }
         catch(Exception e){
-            DialogUtil.showDialog(Login.this,"wrong",false);
+//            DialogUtil.showDialog(Login.this,"wrong",false);
             e.printStackTrace();
 
         }

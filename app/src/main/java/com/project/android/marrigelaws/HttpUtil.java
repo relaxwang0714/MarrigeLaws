@@ -23,7 +23,7 @@ public class HttpUtil {
     public static HttpClient httpClient = new DefaultHttpClient();
     public static final String BASE_URLOne = "Http://";
     public static final String BASE_URLTwo = "Http://192.168.1.100:8080/dianshang/select_servlet";
-    public static final String BASE_URLThree = "Http://10.129.4.45/";
+    public static final String BASE_URLThree = "Http://10.0.2.2:8080/dianshang/login_servlet";
     public static final String BASE_URLFour = "Http://192.168.1.100:8080/dianshang/register_servlet";
 
     public static String postRequest(final String url,

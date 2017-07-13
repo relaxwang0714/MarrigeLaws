@@ -2,4 +2,9 @@
 <resources>
     <item name="menu_my_collection" type="id">menu_my_collection</item>
     <item name="menu_my_history" type="id">menu_my_history</item>
+    <item name="wenshu_rcy" type="id">wenshu_rcy</item>
+    <item name="wenshu_title" type="id">wenshu_title</item>
+    <item name="fatiao_rcy" type="id">fatiao_rcy</item>
+    <item name="fatiao_title" type="id">fatiao_title</item>
+    <item name="history_title" type="id">history_title</item>
 </resources>

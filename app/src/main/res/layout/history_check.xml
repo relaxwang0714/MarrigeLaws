@@ -3,8 +3,8 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="历史查询"/>
+    <com.project.android.marrigelaws.SwipeRecyclerView
+        android:id="@+id/swipeRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>

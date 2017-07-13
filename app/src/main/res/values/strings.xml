@@ -46,4 +46,7 @@
     <string name="menu_my_set_logoff">退出登录</string>
     <string name="my_collection">我的收藏</string>
     <string name="my_history">我的历史</string>
+    <string name="wenshu_collection">文书收藏</string>
+    <string name="new_fresh">最近更新：</string>
+    <string name="fatiao_collection">法条收藏</string>
 </resources>
