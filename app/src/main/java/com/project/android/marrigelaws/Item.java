@@ -8,12 +8,13 @@ import java.util.UUID;
  * Created by 13zqn on 2017/5/24.
  */
 
-class Item {
+public class Item {
     private UUID mId;
     private SimpleDateFormat mDate;
     private int mPicture;
     private String mContexts;
     private String mTitle;
+    private String mJieJue;
     public Item() {
         mId = UUID.randomUUID();
         getDate();
@@ -70,5 +71,13 @@ class Item {
 
     public void setTitle(String title) {
         mTitle = title;
+    }
+
+    public String getJieJue() {
+        return mJieJue;
+    }
+
+    public void setJieJue(String jieJue) {
+        mJieJue = jieJue;
     }
 }

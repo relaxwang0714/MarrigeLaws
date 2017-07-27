@@ -37,7 +37,7 @@ import static android.app.Activity.RESULT_OK;
  * Created by 13zqn on 2017/5/16.
  */
 
-public class Menu_msg_frg extends Fragment {
+public class Menu_msg_frg extends Fragment implements View.OnClickListener{
     private EditText mEditText;
     private ImageButton mImageButtonWrite;
     private ImageButton mImageButtonSet;
@@ -48,6 +48,7 @@ public class Menu_msg_frg extends Fragment {
     int flag;
     private RelativeLayout mHistory;
     private RelativeLayout mCollection;
+    private RelativeLayout mQuestion;
     private static final String TAG = "MainActivity";
 
     public static final int TAKE_PHOTO = 1;
@@ -55,29 +56,53 @@ public class Menu_msg_frg extends Fragment {
     public static final int SELECT_PHOTO = 3;
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.menu_my,container,false);
+
         mEditText = (EditText)v.findViewById(R.id.menu_my_name_set_edit);
+        mQuestion = (RelativeLayout)v.findViewById(R.id.menu_my_question);
         mHistory = (RelativeLayout)v.findViewById(R.id.menu_my_history);
-        mHistory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(getActivity(),FindHistoryFragment.class);
-                getActivity().startActivity(intent);
-            }
-        });
         mCollection = (RelativeLayout)v.findViewById(R.id.menu_my_collection);
-        mCollection.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(getActivity(),FindCollectionFragment.class);
-                getActivity().startActivity(intent);
-            }
-        });
         mImageButtonWrite = (ImageButton)v.findViewById(R.id.menu_my_write);
-        mImageButtonWrite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        mImageButtonSet = (ImageButton)v.findViewById(R.id.menu_my_set);
+        mImageView = (ImageView)v.findViewById(R.id.circle_picture);
+
+//        int[] pic = new int[] {mImageView.getId()};
+//        Intent send = new Intent(getActivity(), Smart_Robot.class);
+//        send.putExtra("sendResDrawable", pic);
+//        startActivity(send);
+
+        mQuestion.setOnClickListener(this);
+        mHistory.setOnClickListener(this);
+        mCollection.setOnClickListener(this);
+        mImageButtonWrite.setOnClickListener(this);
+        mImageButtonSet.setOnClickListener(this);
+        mImageView.setOnClickListener(this);
+
+        return v;
+    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.menu_my_question:
+                Intent intent = new Intent();
+                intent.setClass(getActivity(),LawyerServe.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.menu_my_history:
+                Intent intent1 = new Intent();
+                intent1.setClass(getActivity(),FindHistoryFragment.class);
+                getActivity().startActivity(intent1);
+                break;
+            case R.id.menu_my_collection:
+                Intent intent2 = new Intent();
+                intent2.setClass(getActivity(),FindCollectionFragment.class);
+                getActivity().startActivity(intent2);
+                break;
+            case R.id.menu_my_set:
+                Intent intent3 = new Intent();
+                intent3.setClass(getActivity(),Menu_msg_frg_Set.class);
+                startActivity(intent3);
+                break;
+            case R.id.menu_my_write:
                 if(flag == 0){
                     mEditText.setEnabled(true);
                     flag = 1;
@@ -93,21 +118,8 @@ public class Menu_msg_frg extends Fragment {
                         flag = 0;
                     }
                 }
-            }
-        });
-        mImageButtonSet = (ImageButton)v.findViewById(R.id.menu_my_set);
-        mImageButtonSet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(getActivity(),Menu_msg_frg_Set.class);
-                startActivity(intent);
-            }
-        });
-        mImageView = (ImageView)v.findViewById(R.id.circle_picture);
-        mImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.circle_picture:
                 Dialog dialog = new Dialog(getActivity(), R.style.ActionSheetDialogStyle);
                 View view = LayoutInflater.from(getActivity()).inflate(R.layout.photo_dialog, null);
                 takePhoto = (Button)view.findViewById(R.id.take_photo);
@@ -166,9 +178,8 @@ public class Menu_msg_frg extends Fragment {
 //       将属性设置给窗体
                 dialogWindow.setAttributes(lp);
                 dialog.show();//显示对话框
-            }
-        });
-        return v;
+                break;
+        }
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -287,4 +298,5 @@ public class Menu_msg_frg extends Fragment {
             Toast.makeText(getActivity(), "获取图片失败！", Toast.LENGTH_SHORT).show();
         }
     }
+
 }

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/wenshu_bg"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/logo_wenshu"
+            android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wenshu_title"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_gravity="center"
+                android:textStyle="italic"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"/>
+            </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/wenshu"
+            android:maxLines="1"
+            android:background="@drawable/search_edittext_shape"
+            android:layout_marginBottom="13dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/wenshu_fayuan"
+            android:maxLines="1"
+            android:background="@drawable/search_edittext_shape"
+            android:layout_marginBottom="13dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/wenshu_date"
+            android:maxLines="1"
+            android:background="@drawable/search_edittext_shape"
+            android:layout_marginBottom="13dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="44dp"
+                android:hint="@string/wenshu_fayuan_leixing"
+                android:maxLines="1"
+                android:background="@drawable/search_edittext_shape"
+                android:layout_marginBottom="13dp"
+                android:layout_marginEnd="25dp"/>
+
+        <LinearLayout
+            android:id="@+id/tv_value1_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:orientation="horizontal"
+            android:onClick="onClick">
+
+            <TextView
+                android:id="@+id/tv_value1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:ellipsize="end"
+                android:gravity="start|center"
+                android:hint="文书类型"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="#ff000000"
+                android:textSize="18sp" >
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/bt_dropdown1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/down_arrow" />
+            </LinearLayout>
+        </LinearLayout>
+            </LinearLayout>
+        <Button
+            android:id="@+id/wenshu_checks"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/wenshu_go"
+            android:text="搜索"
+            android:onClick="onClick"
+            android:textSize="25sp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="38dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

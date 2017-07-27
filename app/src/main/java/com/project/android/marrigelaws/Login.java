@@ -19,8 +19,8 @@ import java.util.Map;
  */
 
 public class Login extends AppCompatActivity{
-    private TextView msign;
-    private Button mlogin;
+    private TextView mSign;
+    private Button mLogin;
     private EditText user;
     private EditText pwd;
     @Override
@@ -28,26 +28,26 @@ public class Login extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.userlogin);
-        msign = (TextView)findViewById(R.id.sign);
-        mlogin = (Button)findViewById(R.id.login);
-        msign.setOnClickListener(new msignButton());
-        mlogin.setOnClickListener(new mloginButton());
+        mSign = (TextView)findViewById(R.id.sign);
+        mLogin = (Button)findViewById(R.id.login);
+        mSign.setOnClickListener(new msignButton());
+        mLogin.setOnClickListener(new mloginButton());
         user =(EditText)findViewById(R.id.user_login);
         pwd = (EditText) findViewById(R.id.pwd_login);
         getSupportActionBar().hide();
     }
-    class msignButton implements View.OnClickListener{
+    private class msignButton implements View.OnClickListener{
         public void onClick(View view){
             Intent intent = new Intent();
             intent.setClass(Login.this,Sign.class);
             Login.this.startActivity(intent);
         }
     }
-    class mloginButton implements View.OnClickListener{
+   private class mloginButton implements View.OnClickListener{
         public void onClick(View view){
             if(validate()){
                 if(loginPro()){
-                    Intent intent = new Intent(Login.this,LawyerServe.class);
+                    Intent intent = new Intent(Login.this,MainActivity.class);
                     startActivity(intent);
                     finish();
                 }

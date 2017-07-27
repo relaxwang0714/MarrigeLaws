@@ -26,7 +26,7 @@ public class Find_fatiaoCollectionFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.history_check,container,false);
+        View view = inflater.inflate(R.layout.rcy_swipe,container,false);
         recyclerView = (SwipeRecyclerView) view.findViewById(R.id.swipeRecyclerView);
 
         //set color
@@ -83,7 +83,7 @@ public class Find_fatiaoCollectionFragment extends Fragment{
         recyclerView.setRefreshing(true);
         return view;
     }
-    private class RecyclerViewAdapter extends RecyclerView.Adapter<HistorySelect.ItemViewHolder> {
+    private class RecyclerViewAdapter extends RecyclerView.Adapter<ItemViewHolder> {
 
         @Override
         public int getItemCount() {
@@ -91,14 +91,14 @@ public class Find_fatiaoCollectionFragment extends Fragment{
         }
 
         @Override
-        public HistorySelect.ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(getActivity()).inflate(R.layout.history_list, parent, false);
-            return new HistorySelect.ItemViewHolder(view);
+        public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(getActivity()).inflate(R.layout.rcy_list, parent, false);
+            return new ItemViewHolder(view);
         }
 
 
         @Override
-        public void onBindViewHolder(final HistorySelect.ItemViewHolder holder, final int position) {
+        public void onBindViewHolder(final ItemViewHolder holder, final int position) {
 
             Item item = data.get(position);
             holder.bindLawyerItem(item);
@@ -120,8 +120,8 @@ public class Find_fatiaoCollectionFragment extends Fragment{
         private TextView mTitle;
         public ItemViewHolder(View view) {
             super(view);
-            mTime = (TextView)itemView.findViewById(R.id.history_time);
-            mTitle = (TextView) itemView.findViewById(R.id.history_title);
+            mTime = (TextView)itemView.findViewById(R.id.rcy_time);
+            mTitle = (TextView) itemView.findViewById(R.id.rcy_title);
         }
         public void bindLawyerItem(Item item){
             mItem = item;

@@ -1,6 +1,5 @@
 package com.project.android.marrigelaws;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -16,7 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,7 +27,7 @@ import java.util.concurrent.TimeUnit;
  * Created by 13zqn on 2017/5/16.
  */
 
-public class Menu_main_frg extends Fragment {
+public class Menu_main_frg extends Fragment{
     private ViewPager mViewPaper;
     private RecyclerView mRecyclerView_news;
     private Menu_main_newsAdapter mAdapter;
@@ -44,32 +42,31 @@ public class Menu_main_frg extends Fragment {
             R.drawable.b,
             R.drawable.c,
             R.drawable.d,
-            R.drawable.e
     };
     //存放图片的标题
-    private String[]  titles = new String[]{
-            "Macbook1",
-            "Macbook2",
-            "Macbook3",
-            "Macbook4",
-            "Macbook5"
-    };
+//    private String[]  titles = new String[]{
+//            "Macbook1",
+//            "Macbook2",
+//            "Macbook3",
+//            "Macbook4",
+//    };
     private TextView title;
     private ViewPagerAdapter adapter;
-    private LinearLayout checks;
+//    private LinearLayout checks;
+//    private LinearLayout mLawItem;
     private ScheduledExecutorService scheduledExecutorService;
+//    private ChangeColorIconWithText one;
+//    private ChangeColorIconWithText two;
+//    private ChangeColorIconWithText three;
+//    private List<ChangeColorIconWithText> mTabIndicators = new ArrayList<>();
     public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.menu_main_frg,container,false);
         mViewPaper = (ViewPager)v.findViewById(R.id.vp);
-        checks = (LinearLayout)v.findViewById(R.id.check);
-        checks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Login.class);
-                getActivity().startActivity(intent);
-//                getActivity().finish();
-            }
-        });
+//        mLawItem = (LinearLayout)v.findViewById(R.id.menu_law_item);
+//        checks = (LinearLayout)v.findViewById(R.id.check);
+
+//        mLawItem.setOnClickListener(this);
+//        checks.setOnClickListener(this);
         //显示的图片
         images = new ArrayList<ImageView>();
         for(int i = 0; i < imageIds.length; i++){
@@ -84,10 +81,9 @@ public class Menu_main_frg extends Fragment {
         dots.add(v.findViewById(R.id.dot_1));
         dots.add(v.findViewById(R.id.dot_2));
         dots.add(v.findViewById(R.id.dot_3));
-        dots.add(v.findViewById(R.id.dot_4));
 
-        title = (TextView) v.findViewById(R.id.title);
-        title.setText(titles[0]);
+//        title = (TextView) v.findViewById(R.id.title);
+//        title.setText(titles[0]);
 
         adapter = new ViewPagerAdapter();
         mViewPaper.setAdapter(adapter);
@@ -108,7 +104,7 @@ public class Menu_main_frg extends Fragment {
             @Override
             public void onPageSelected(int position) {
                 position = position % images.size();
-                title.setText(titles[position]);
+//                title.setText(titles[position]);
                 dots.get(position).setBackgroundResource(R.drawable.dot_focused);
                 dots.get(oldPosition).setBackgroundResource(R.drawable.dot_normal);
 
@@ -131,9 +127,35 @@ public class Menu_main_frg extends Fragment {
         mRecyclerView_news.setHasFixedSize(true);
         mRecyclerView_news.setLayoutManager(new LinearLayoutManager(getActivity()));
         updateUI();
-
         return v;
     }
+
+//    @Override
+//    public void onClick(View v) {
+//        switch (v.getId()){
+//            case R.id.menu_law_item:
+//                View view = LayoutInflater.from(getActivity()).inflate(R.layout.activity_main, null);
+//                one = (ChangeColorIconWithText) view.findViewById(R.id.menu_main);
+//                one.setIconAlpha(0);
+//                two = (ChangeColorIconWithText) view.findViewById(R.id.menu_check);
+//                two.setIconAlpha(0.5f);
+//                FragmentManager fm = getFragmentManager();
+////                Fragment fragment = fm.findFragmentById(R.id.main_in);
+//                Menu_laywer_frg fragment = new Menu_laywer_frg();
+//                fm.beginTransaction().replace(R.id.main_in, fragment).commit();
+//                break;
+//            case R.id.check:
+//                Intent intent1 = new Intent(getActivity(),LawyerServe.class);
+//                getActivity().startActivity(intent1);
+//                break;
+//        }
+//
+//    }
+//    private void resetOtherTabs() {
+//        for (int i = 0; i < mTabIndicators.size(); i++) {
+//            mTabIndicators.get(i).setIconAlpha(0);
+//        }
+//    }
 
 //    @Override
 //    public void onActivityCreated(@Nullable Bundle savedInstanceState) {

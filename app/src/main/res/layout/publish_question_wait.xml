@@ -2,16 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="@string/menu_main_lawyer_publish_serve"
-        android:textColor="@color/colordarkOrange"
-        android:textSize="40sp"
-        android:gravity="center"/>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp">
         <ImageView
             android:id="@+id/letter"
             android:layout_width="50dp"

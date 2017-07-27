@@ -6,5 +6,8 @@
     <item name="wenshu_title" type="id">wenshu_title</item>
     <item name="fatiao_rcy" type="id">fatiao_rcy</item>
     <item name="fatiao_title" type="id">fatiao_title</item>
+    <item name="rcy_title" type="id">rcy_title</item>
+    <item name="history_time" type="id">history_time</item>
     <item name="history_title" type="id">history_title</item>
+    <item name="menu_check_law_item" type="id">menu_check_law_item</item>
 </resources>

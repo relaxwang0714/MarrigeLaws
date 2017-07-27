@@ -14,34 +14,21 @@
         android:orientation="vertical">
         <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="160dp">
+        android:layout_height="200dp">
         <android.support.v4.view.ViewPager
             android:id="@+id/vp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/vp_scoll"/>
 
-        <LinearLayout
-            android:id="@+id/vp_scoll"
-            android:layout_width="match_parent"
-            android:layout_height="35dip"
-            android:background="#33000000"
-            android:gravity="center"
-            android:layout_alignParentBottom="true"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="图片标题"
-                android:textColor="@android:color/white"/>
-
             <LinearLayout
+                android:id="@+id/vp_scoll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dip"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
 
                 <View
                     android:id="@+id/dot_0"
@@ -74,81 +61,12 @@
                     android:layout_marginLeft="2dip"
                     android:layout_marginRight="2dip"
                     android:background="@drawable/dot_normal"/>
-
-                <View
-                    android:id="@+id/dot_4"
-                    android:layout_width="5dip"
-                    android:layout_height="5dip"
-                    android:layout_marginLeft="2dip"
-                    android:layout_marginRight="2dip"
-                    android:background="@drawable/dot_normal"/>
-
             </LinearLayout>
-        </LinearLayout>
     </RelativeLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="16dp"
             android:background="@color/colorGrey"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="10"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_gravity="center">
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:scaleType="fitXY"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/search"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/menu_main_law"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:gravity="center"/>
-                </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/colorGrey"/>
-
-            <LinearLayout
-                android:id="@+id/check"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="9"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginLeft="111dp">
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:scaleType="fitXY"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/lawyercheck"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/menu_main_lawyer"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/colorGrey"/>
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

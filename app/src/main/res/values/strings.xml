@@ -12,9 +12,9 @@
     <string name="menu_main_law">法条查询</string>
     <string name="menu_main_lawyer">律师服务</string>
     <string name="menu_main_news">新闻资讯</string>
-    <string name="menu_main_lawyer_publish_serve">律师服务</string>
-    <string name="menu_main_lawyer_publish_txt">尽量详细的描述了你的问题，律师才能更好的服务你哦</string>
-    <string name="menu_main_lawyer_publish_submit">提交</string>
+    <string name="menu_main_lawyer_publish_serve">我要提问</string>
+    <string name="menu_main_lawyer_publish_txt">简要描述你的问题</string>
+    <string name="menu_main_lawyer_publish_submit">确认提交</string>
     <string name="menu_main_lawyer_publish_wait">您的问题已提交，请耐心等待……</string>
     <string name="menu_main_lawyer_publish_wait_check">查看我的律师反馈</string>
     <string name="pwd">密码</string>
@@ -49,4 +49,12 @@
     <string name="wenshu_collection">文书收藏</string>
     <string name="new_fresh">最近更新：</string>
     <string name="fatiao_collection">法条收藏</string>
+    <string name="publish_title">输入标题</string>
+    <string name="jiejue">待处理</string>
+    <string name="tip">文书</string>
+    <string name="wenshu">请输入文字内容、关键字等</string>
+    <string name="wenshu_fayuan">法院名称</string>
+    <string name="wenshu_title">文书查询</string>
+    <string name="wenshu_date">裁判日期格式:如2017-03-01</string>
+    <string name="wenshu_fayuan_leixing">法院类型</string>
 </resources>

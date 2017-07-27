@@ -21,7 +21,7 @@ public class FindHistoryFragment extends FragmentActivity {
     private TabLayout mMainHistorySelect;
     private ViewPager mHistoryVP;
     private HistorySelect mHistorySelect;
-    private HistoryQuestion mHistoryQuestion;
+    private LawyerServeWaitChecks mHistoryQuestion;
     private FragmentPagerAdapter PAdapter; //定义adapter
     private List<Fragment> lists_fragment; //定义要装fragment的列表
     private List<String> lists_title; //tab名称列表
@@ -46,7 +46,7 @@ public class FindHistoryFragment extends FragmentActivity {
         mHistoryVP = (ViewPager)findViewById(R.id.vp_FindHistoryFragment_pager);
 
         mHistorySelect = new HistorySelect();
-        mHistoryQuestion = new HistoryQuestion();
+        mHistoryQuestion = new LawyerServeWaitChecks();
 
         lists_fragment = new ArrayList<>();
         lists_fragment.add(mHistorySelect);

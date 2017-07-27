@@ -3,28 +3,54 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/time_import"
+              android:layout_height="wrap_content">
+           <View
+               android:layout_marginTop="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="@color/Grey"/>
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="90dp"
+                   android:layout_marginTop="10dp">
+                   <TextView
+                    android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="提交时间"
-                    android:textSize="20sp"
-                    android:layout_centerVertical="true"/>
-                <ImageView
-                    android:id="@+id/pic_finish_or_not"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_launcher"/>
-            </RelativeLayout>
-    <TextView
-        android:id="@+id/lawyer_context"
+                    android:layout_marginStart="10dp"
+                    android:text="标题:"
+                    android:textColor="@color/Grey"
+                    android:textSize="20sp"/>
+                   <TextView
+                       android:id="@+id/title_import"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       tools:text="内容"
+                       android:layout_marginStart="10dp"
+                       android:textSize="20sp"
+                       android:layout_toEndOf="@+id/title"/>
+                   <TextView
+                       android:id="@+id/lawyer_time"
+                       android:layout_width="100dp"
+                       android:layout_height="wrap_content"
+                       tools:text="2017-12-31 12:22"
+                       android:textSize="12sp"
+                       android:layout_alignParentBottom="true"
+                       android:layout_toStartOf="@+id/lawyer_jiejue"/>
+                   <TextView
+                       android:id="@+id/lawyer_jiejue"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       tools:text="@string/jiejue"
+                       android:textColor="@color/Blue"
+                       android:textSize="12sp"
+                       android:layout_marginEnd="10dp"
+                       android:layout_alignParentBottom="true"
+                       android:layout_alignParentEnd="true"/>
+               </RelativeLayout>
+    <View
+        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="内容"
-        android:textSize="24sp"/>
+        android:layout_height="1dp"
+        android:background="@color/Grey"/>
 </LinearLayout>

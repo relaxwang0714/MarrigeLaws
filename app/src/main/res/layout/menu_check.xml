@@ -22,6 +22,7 @@
         android:orientation="vertical"
         android:background="@color/colorWhite">
         <RelativeLayout
+            android:id="@+id/menu_check_smart"
             android:layout_width="match_parent"
             android:layout_height="60dp">
             <ImageView
@@ -55,6 +56,7 @@
             android:layout_height="2dp"
              android:background="@color/colorGrey"/>
         <RelativeLayout
+            android:id="@id/menu_check_law_item"
             android:layout_width="match_parent"
             android:layout_height="60dp">
             <ImageView
@@ -89,6 +91,7 @@
             android:background="@color/colorGrey"/>
 
         <RelativeLayout
+            android:id="@+id/menu_check_book"
             android:layout_width="match_parent"
             android:layout_height="60dp">
             <ImageView

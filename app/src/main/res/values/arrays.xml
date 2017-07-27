@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wenshu_style">
+        <item>判决书</item>
+        <item>裁定书</item>
+        <item>调解书</item>
+        <item>决定书</item>
+        <item>通知书</item>
+        <item>批复</item>
+        <item>答复</item>
+        <item>涵</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="fayuan_name">
+        <item>最高法院</item>
+        <item>高级法院</item>
+        <item>中级法院</item>
+        <item>基层法院</item>
+    </string-array>
+</resources>

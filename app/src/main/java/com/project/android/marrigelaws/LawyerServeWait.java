@@ -1,6 +1,5 @@
 package com.project.android.marrigelaws;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -21,9 +20,9 @@ public class LawyerServeWait extends AppCompatActivity {
         mCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(LawyerServeWait.this,LawyerServeWaitChecks.class);
-                LawyerServeWait.this.startActivity(intent);
+//                Intent intent = new Intent();
+//                intent.setClass(LawyerServeWait.this,LawyerServeWaitChecks.class);
+//                LawyerServeWait.this.startActivity(intent);
             }
         });
     }

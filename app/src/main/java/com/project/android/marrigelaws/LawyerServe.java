@@ -26,5 +26,6 @@ public class LawyerServe extends AppCompatActivity{
                 LawyerServe.this.startActivity(intent);
             }
         });
+        getSupportActionBar().hide();
     }
 }
